@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Existing Payments</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            display: inline-block;
+            margin: 5px;
+        }
+        .button.view {
+            background-color: #17a2b8;
+        }
+        .button.edit {
+            background-color: #ffc107;
+        }
+        .button.delete {
+            background-color: #dc3545;
+        }
+        .button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Manage Existing Payments</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Payment Method</th>
+                    <th>Details</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>UPI</td>
+                    <td>upi@bank.com</td>
+                    <td>
+                        <a href="view_payment.html?method=upi" class="button view">View</a>
+                        <a href="edit_payment.html?method=upi" class="button edit">Edit</a>
+                        <a href="delete_payment.html?method=upi" class="button delete">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>PayPal</td>
+                    <td>paypal@example.com</td>
+                    <td>
+                        <a href="view_payment.html?method=paypal" class="button view">View</a>
+                        <a href="edit_payment.html?method=paypal" class="button edit">Edit</a>
+                        <a href="delete_payment.html?method=paypal" class="button delete">Delete</a>
+                    </td>
+                </tr>
+                <!-- Add more payment methods as needed -->
+            </tbody>
+        </table>
+
+        <a href="add_payment.html" class="button">Add New Payment Method</a>
+        <a href="manage_events.html" class="button">Back to Manage Events</a>
+    </div>
+
+</body>
+</html>

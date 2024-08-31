@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Attendance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .button:hover {
+            opacity: 0.8;
+        }
+        .event-section {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Mark Attendance</h1>
+        
+        <div class="event-section">
+            <h2>Logo Design</h2>
+            <form action="save_attendance.html" method="post">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Present</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Alice Johnson</td><td><input type="checkbox" name="logo_design_present1"></td></tr>
+                        <tr><td>Bob Smith</td><td><input type="checkbox" name="logo_design_present2"></td></tr>
+                        <tr><td>Charlie Brown</td><td><input type="checkbox" name="logo_design_present3"></td></tr>
+                        <tr><td>David Wilson</td><td><input type="checkbox" name="logo_design_present4"></td></tr>
+                        <tr><td>Eva Davis</td><td><input type="checkbox" name="logo_design_present5"></td></tr>
+                        <tr><td>Fiona Clark</td><td><input type="checkbox" name="logo_design_present6"></td></tr>
+                        <tr><td>George Lewis</td><td><input type="checkbox" name="logo_design_present7"></td></tr>
+                        <tr><td>Hannah Martin</td><td><input type="checkbox" name="logo_design_present8"></td></tr>
+                        <tr><td>Ian Lee</td><td><input type="checkbox" name="logo_design_present9"></td></tr>
+                        <tr><td>Jasmine Allen</td><td><input type="checkbox" name="logo_design_present10"></td></tr>
+                        <tr><td>Kevin Young</td><td><input type="checkbox" name="logo_design_present11"></td></tr>
+                        <tr><td>Lily King</td><td><input type="checkbox" name="logo_design_present12"></td></tr>
+                        <tr><td>Mike Wright</td><td><input type="checkbox" name="logo_design_present13"></td></tr>
+                        <tr><td>Nina Scott</td><td><input type="checkbox" name="logo_design_present14"></td></tr>
+                        <tr><td>Oliver Walker</td><td><input type="checkbox" name="logo_design_present15"></td></tr>
+                    </tbody>
+                </table>
+                <input type="submit" value="Save Attendance" class="button">
+            </form>
+        </div>
+        
+        <div class="event-section">
+            <h2>PUBG</h2>
+            <form action="save_attendance.html" method="post">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Present</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Paul Johnson</td><td><input type="checkbox" name="pubg_present1"></td></tr>
+                        <tr><td>Quinn Smith</td><td><input type="checkbox" name="pubg_present2"></td></tr>
+                        <tr><td>Riley Brown</td><td><input type="checkbox" name="pubg_present3"></td></tr>
+                        <tr><td>Samantha Wilson</td><td><input type="checkbox" name="pubg_present4"></td></tr>
+                        <tr><td>Tom Davis</td><td><input type="checkbox" name="pubg_present5"></td></tr>
+                        <tr><td>Ursula Clark</td><td><input type="checkbox" name="pubg_present6"></td></tr>
+                        <tr><td>Victor Lewis</td><td><input type="checkbox" name="pubg_present7"></td></tr>
+                        <tr><td>Wendy Martin</td><td><input type="checkbox" name="pubg_present8"></td></tr>
+                        <tr><td>Xander Lee</td><td><input type="checkbox" name="pubg_present9"></td></tr>
+                        <tr><td>Yara Allen</td><td><input type="checkbox" name="pubg_present10"></td></tr>
+                        <tr><td>Zachary Young</td><td><input type="checkbox" name="pubg_present11"></td></tr>
+                        <tr><td>Amy King</td><td><input type="checkbox" name="pubg_present12"></td></tr>
+                        <tr><td>Brian Wright</td><td><input type="checkbox" name="pubg_present13"></td></tr>
+                        <tr><td>Catherine Scott</td><td><input type="checkbox" name="pubg_present14"></td></tr>
+                        <tr><td>Daniel Walker</td><td><input type="checkbox" name="pubg_present15"></td></tr>
+                    </tbody>
+                </table>
+                <input type="submit" value="Save Attendance" class="button">
+            </form>
+        </div>
+        
+        <div class="event-section">
+            <h2>Free Fire</h2>
+            <form action="save_attendance.html" method="post">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Present</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Grace Johnson</td><td><input type="checkbox" name="free_fire_present1"></td></tr>
+                        <tr><td>Henry Smith</td><td><input type="checkbox" name="free_fire_present2"></td></tr>
+                        <tr><td>Isabella Brown</td><td><input type="checkbox" name="free_fire_present3"></td></tr>
+                        <tr><td>James Wilson</td><td><input type="checkbox" name="free_fire_present4"></td></tr>
+                        <tr><td>Kate Davis</td><td><input type="checkbox" name="free_fire_present5"></td></tr>
+                        <tr><td>Leo Clark</td><td><input type="checkbox" name="free_fire_present6"></td></tr>
+                        <tr><td>Mia Lewis</td><td><input type="checkbox" name="free_fire_present7"></td></tr>
+                        <tr><td>Noah Martin</td><td><input type="checkbox" name="free_fire_present8"></td></tr>
+                        <tr><td>Olivia Lee</td><td><input type="checkbox" name="free_fire_present9"></td></tr>
+                        <tr><td>Peter Allen</td><td><input type="checkbox" name="free_fire_present10"></td></tr>
+                        <tr><td>Quincy Young</td><td><input type="checkbox" name="free_fire_present11"></td></tr>
+                        <tr><td>Rachel King</td><td><input type="checkbox" name="free_fire_present12"></td></tr>
+                        <tr><td>Steven Wright</td><td><input type="checkbox" name="free_fire_present13"></td></tr>
+                        <tr><td>Tina Scott</td><td><input type="checkbox" name="free_fire_present14"></td></tr>
+                        <tr><td>Uma Walker

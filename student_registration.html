@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="number"], select {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        #eventsList {
+            text-align: left;
+            margin-top: 10px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Student Registration</h1>
+        <form id="registrationForm" onsubmit="return handleRegistration()">
+            <input type="text" id="fullName" name="fullName" placeholder="Full Name" required><br>
+            <input type="text" id="regNo" name="regNo" placeholder="Registration No" required><br>
+            <input type="text" id="whatsapp" name="whatsapp" placeholder="WhatsApp Number" required><br>
+            <input type="number" id="numEvents" name="numEvents" placeholder="Number of Events Interested" required><br>
+            <label for="eventType">Event Type:</label>
+            <select id="eventType" name="eventType" onchange="showEvents(this)" required>
+                <option value="">Select Event Type</option>
+                <option value="technical">Technical Events</option>
+                <option value="nonTechnical">Non-Technical Events</option>
+            </select><br>
+            <div id="eventsList" style="display: none;">
+                <!-- Events will be dynamically added here -->
+            </div>
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+    <script>
+        function handleRegistration() {
+            alert("Registration successful!");
+            window.location.href = "index.html";
+            return false;
+        }
+
+        function showEvents(select) {
+            const eventsList = document.getElementById('eventsList');
+            eventsList.style.display = 'block';
+            eventsList.innerHTML = '';
+            const eventType = select.value;
+
+            if (eventType === 'technical') {
+                eventsList.innerHTML = `
+                    <label for="technicalEvents">Select Technical Events:</label><br>
+                    <input type="checkbox" id="logoDesign" name="technicalEvents" value="Logo Design">
+                    <label for="logoDesign">Logo Design</label><br>
+                    <input type="checkbox" id="paperPresentation" name="technicalEvents" value="Paper Presentation">
+                    <label for="paperPresentation">Paper Presentation</label><br>
+                `;
+            } else if (eventType === 'nonTechnical') {
+                eventsList.innerHTML = `
+                    <label for="nonTechnicalEvents">Select Non-Technical Events:</label><br>
+                    <input type="checkbox" id="freeFire" name="nonTechnicalEvents" value="Free Fire">
+                    <label for="freeFire">Free Fire</label><br>
+                    <input type="checkbox" id="onlineGames" name="nonTechnicalEvents" value="Online Games">
+                    <label for="onlineGames">Online Games</label><br>
+                    <input type="checkbox" id="pubg" name="nonTechnicalEvents" value="PUBG">
+                    <label for="pubg">PUBG</label><br>
+                `;
+            }
+        }
+    </script>
+
+</body>
+</html>

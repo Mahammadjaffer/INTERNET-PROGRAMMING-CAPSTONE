@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizer Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px; /* Ensure form width doesn't exceed screen width */
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+        input[type="text"], input[type="password"] {
+            padding: 10px;
+            margin: 10px 0;
+            width: calc(100% - 22px); /* Adjust for padding and border */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Include padding and border in width */
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: calc(100% - 22px); /* Adjust for padding and border */
+        }
+        a {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="loginForm" onsubmit="return handleLogin()">
+        <h1>Organizer Login</h1>
+        <input type="text" id="username" name="username" placeholder="Username" required><br>
+        <input type="password" id="password" name="password" placeholder="Password" required><br>
+        <input type="submit" value="Login">
+        <a href="organizer_signup.html">Create an Account</a>
+    </form>
+
+    <script>
+        function handleLogin() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === "organizer" && password === "password123") {
+                window.location.href = "organizer_dashboard.html";
+            } else {
+                alert("Login unsuccessful. Please check your username and password.");
+                window.location.href = "organizer_signup.html";
+            }
+            return false; // Prevent form submission
+        }
+    </script>
+
+</body>
+</html>

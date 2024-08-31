@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup QR Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+        form {
+            margin: 20px 0;
+        }
+        input[type="text"], input[type="date"], input[type="url"] {
+            padding: 10px;
+            margin: 10px;
+            width: 80%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        .qr-code {
+            margin-top: 20px;
+        }
+        .qr-code img {
+            max-width: 200px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Setup QR Code for Event</h1>
+        
+        <form action="generate_qr_code.html" method="post">
+            <input type="text" name="eventName" placeholder="Event Name" required><br>
+            <input type="date" name="eventDate" placeholder="Event Date" required><br>
+            <input type="url" name="eventUrl" placeholder="Event URL" required><br>
+            <input type="submit" value="Generate QR Code">
+        </form>
+
+        <div class="qr-code">
+            <h2>Generated QR Code:</h2>
+            <!-- QR Code image will be displayed here after generation -->
+            <img src="#" alt="QR Code" id="qrCodeImage">
+        </div>
+
+        <a href="manage_events.html" class="button">Back to Manage Events</a>
+    </div>
+
+</body>
+</html>

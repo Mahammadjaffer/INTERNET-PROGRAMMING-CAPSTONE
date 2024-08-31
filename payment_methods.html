@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Methods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+        .payment-option {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .payment-option h2 {
+            margin: 0;
+            font-size: 20px;
+            color: #007BFF;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            display: inline-block;
+            margin: 10px;
+        }
+        .button.add {
+            background-color: #28a745;
+        }
+        .button.manage {
+            background-color: #ffc107;
+        }
+        .button.back {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Payment Methods</h1>
+        
+        <div class="payment-option">
+            <h2>UPI Payment Setup</h2>
+            <p>Configure your UPI payment method here. Ensure to provide the correct UPI ID.</p>
+            <a href="setup_upi.html" class="button add">Setup UPI</a>
+        </div>
+        
+        <div class="payment-option">
+            <h2>QR Code Payment Setup</h2>
+            <p>Configure the QR code scanner for payments. You can use this for quick payments at the event.</p>
+            <a href="setup_qr_code.html" class="button add">Setup QR Code</a>
+        </div>
+
+        <div class="payment-option">
+            <h2>Manage Payment Methods</h2>
+            <p>View and manage your existing payment methods.</p>
+            <a href="manage_existing_payments.html" class="button manage">Manage Payments</a>
+        </div>
+
+        <a href="organizer_dashboard.html" class="button back">Back to Dashboard</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage and Edit Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .actions {
+            display: flex;
+            gap: 10px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .button.edit {
+            background-color: #ffc107;
+        }
+        .button.delete {
+            background-color: #dc3545;
+        }
+        .button.add-event {
+            margin-top: 20px;
+            background-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Manage Your Events</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Event Name</th>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Logo Design</td>
+                    <td>10th Sept 2024</td>
+                    <td>A creative competition where participants design logos based on given themes.</td>
+                    <td class="actions">
+                        <a href="edit_event.html?event=logo_design" class="button edit">Edit</a>
+                        <a href="delete_event.html?event=logo_design" class="button delete">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Paper Presentation</td>
+                    <td>11th Sept 2024</td>
+                    <td>Participants present research papers on various technical and non-technical topics.</td>
+                    <td class="actions">
+                        <a href="edit_event.html?event=paper_presentation" class="button edit">Edit</a>
+                        <a href="delete_event.html?event=paper_presentation" class="button delete">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Free Fire</td>
+                    <td>12th Sept 2024</td>
+                    <td>An esports event where players compete in the popular battle royale game Free Fire.</td>
+                    <td class="actions">
+                        <a href="edit_event.html?event=free_fire" class="button edit">Edit</a>
+                        <a href="delete_event.html?event=free_fire" class="button delete">Delete</a>
+                    </td>
+                </tr>
+                <!-- Add more events as needed -->
+            </tbody>
+        </table>
+
+        <a href="add_event.html" class="button add-event">Add New Event</a>
+    </div>
+
+</body>
+</html>

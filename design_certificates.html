@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Certificates</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            font-size: 16px;
+            margin: 10px 0 5px;
+            text-align: left;
+            width: 100%;
+            max-width: 500px;
+        }
+        input[type="text"], input[type="date"], input[type="file"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .link-container {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-container">
+            <h1>Design Event Certificates</h1>
+            <form action="generate_certificate.html" method="post">
+                <label for="event-name">Event Name:</label>
+                <input type="text" id="event-name" name="event_name" placeholder="Enter Event Name" required>
+                
+                <label for="participant-name">Participant Name:</label>
+                <input type="text" id="participant-name" name="participant_name" placeholder="Enter Participant Name" required>
+                
+                <label for="college-name">College Name:</label>
+                <input type="text" id="college-name" name="college_name" placeholder="Enter College Name" required>
+                
+                <label for="event-date">Event Date:</label>
+                <input type="date" id="event-date" name="event_date" required>
+                
+                <label for="certificate-template">Upload Certificate Template:</label>
+                <input type="file" id="certificate-template" name="certificate_template" accept=".jpg, .jpeg, .png, .pdf" required>
+                
+                <input type="submit" value="Generate Certificate">
+            </form>
+        </div>
+        
+        <div class="link-container">
+            <a href="manage_events.html" class="button">Back to Event Management</a>
+        </div>
+    </div>
+
+</body>
+</html>

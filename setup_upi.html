@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup UPI Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"], input[type="email"], input[type="submit"] {
+            padding: 10px;
+            margin: 10px 0;
+            width: 90%;
+            max-width: 500px;
+        }
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #dc3545;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Setup UPI Payment</h1>
+        
+        <form action="save_upi_details.html" method="post">
+            <label for="upi-id">UPI ID:</label><br>
+            <input type="text" id="upi-id" name="upi-id" placeholder="example@upi" required><br>
+
+            <label for="upi-name">Name:</label><br>
+            <input type="text" id="upi-name" name="upi-name" placeholder="Your Name" required><br>
+
+            <label for="upi-email">Email:</label><br>
+            <input type="email" id="upi-email" name="upi-email" placeholder="example@example.com" required><br>
+
+            <input type="submit" value="Save UPI Details">
+        </form>
+
+        <a href="payment_methods.html" class="button">Back to Payment Methods</a>
+    </div>
+
+</body>
+</html>
